@@ -1,0 +1,12 @@
+version: "3"
+services: 
+  terraform:
+    platform: linux/amd64
+    container_name: terraform
+    build: .
+    volumes:
+      - .:/terraform
+    entrypoint: ash
+    tty: true
+    working_dir: /terraform
+  
