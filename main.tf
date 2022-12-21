@@ -19,6 +19,16 @@ variable "secret_key" {
   type = string
 }
 
+variable "SPOTIFY_REFRESH_TOKEN" {
+  type = string
+}
+variable "SPOTIFY_CLIENT_ID" {
+  type = string
+}
+variable "SPOTIFY_CLIENT_SECRET" {
+  type = string
+}
+
 provider "aws" {
   region     = "ap-northeast-1"
   access_key = var.access_key
@@ -27,3 +37,4 @@ provider "aws" {
 
 # terraform plan -var-file="terraform.tfvars"
 # terraform apply -var-file="terraform.tfvars"
+# terraform destroy -var-file="terraform.tfvars"
